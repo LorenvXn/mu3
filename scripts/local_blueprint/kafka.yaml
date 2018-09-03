@@ -1,0 +1,103 @@
+#  yaml configuration firle for kafka only
+# 
+# /opt/local_blueprint - folder on master host for blueprint scripts (containers & images scripts)
+#
+# /opt/local_shift - folder on master host where the modified blueprint are copied to (and from there, sent to remote hosts)
+# 
+# /opt/local_images/{kafka;zookeeper;spark} - where Dockerfiles are
+#
+# /opt/remote_shift/{kafka; zookeeper; sparl} - remote server folder where modified files from /opt/local_shift &/opt/local_images is copied to
+#
+# this example is done using tron user, change it according to your needs
+ 
+
+- hosts: '{{ server }} '   #replace server...add it in extra-vars '{{ server }}'
+  remote_user: tron
+  become: yes
+  become_method: sudo
+  tasks: 
+
+    - name: copy blueprint param_run_container.sh into usable files. #modify blueprint container and copy it to /opt/local_shift for our Real servers
+      copy:
+        dest: /opt/local_shift/kafka/param_run_container.sh
+        src: /opt/local_blueprint/blueprint_param_run_container.sh
+        owner: tron
+        group: tron
+        delegate_to: 127.0.0.1 #nice shit unde ansible 2.6
+
+
+    - name: copy blueprint run_image into modified files, specific to server.   
+      copy:
+        dest: /opt/local_shift/kafka/run_image.sh.  
+        src: /opt/local_blueprint/blueprint_run_image.sh 
+        delegate_to: 127.0.0.1
+
+
+    - name: copy Dockerfile  on remotekafka host
+      copy:
+        dest: /opt/remote_shift/kafka/
+        src: /opt/local_images/kafka/Dockerfile
+        owner: tron
+        group: tron
+
+   
+    - name: replace to build the image
+      replace:
+        dest: /opt/local_shift/kafka/run_image.sh
+        regexp: containerimage
+        replace: '{{ containerimage }}'
+        
+  
+    - name: replace to build the image
+      replace:
+        dest: /opt/local_shift/kafka/run_image.sh
+        regexp: tagimage
+        replace: '{{ tagimage }}'
+
+
+    - name: copy to remotekafka to build image
+      copy:
+        dest: /opt/remote_shift/kafka/
+        src: /opt/local_shift/kafka/run_image.sh
+
+
+    - name: build the image on remotekafka host
+      command: bash /opt/remote_shift/kafka/run_image.sh
+      
+replace
+    - name:  add new name container 
+      replace:
+        dest: /opt/local_shift/kafka/param_run_container.sh #I might have to add a an extra folder for every service 'cause reasons!
+        regexp: 'namecontainer'
+        replace: '{{ namecontainer }} '
+
+    - name: replace port host
+      replace:
+        dest: /opt/local_shift/kafka/param_run_container.sh
+        regexp: 'porthost'
+        replace: '{{ porthost }}'
+
+    - name: replace port container
+      replace:
+        dest: /opt/local_shift/kafka/param_run_container.sh
+        regexp: 'portcontainer'
+        replace: '{{ portcontainer }}'
+    - name: replace tag image
+      replace:
+        dest: /opt/local_shift/param_run_container.sh
+        regexp: 'tagimage'
+        replace: '{{ tagimage }}'
+
+    - name: copy files from controller to remotekafka
+      copy:
+        src: /opt/local_shift/kafka/param_run_container.sh
+        dest: /opt/remote_shift/kafka/
+        owner: tron
+        group: tron
+   
+    - name: start container on remotekafka host
+      command: bash /opt/remote_shift/kafka/param_run_container.sh 
+
+
+ #   -name: remove modified files from controller
+ #     command: rm /opt/local_shift/kafka/*
