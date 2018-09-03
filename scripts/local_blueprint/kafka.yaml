@@ -17,7 +17,7 @@
   become_method: sudo
   tasks: 
 
-    - name: copy blueprint param_run_container.sh into usable files. #modify blueprint container and copy it to /opt/local_shift for our Real servers
+    - name: copy blueprint param_run_container.sh into usable files.
       copy:
         dest: /opt/local_shift/kafka/param_run_container.sh
         src: /opt/local_blueprint/blueprint_param_run_container.sh
