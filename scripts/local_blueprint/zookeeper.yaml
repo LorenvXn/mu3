@@ -11,8 +11,6 @@
 #
 # this example is done using tron user, change it according to your needs
 #
-# "It's like I tell my nigg4z, keep your eyes on these b3tches"
-# "They love to G a n1gga young dumb & gettin' riches"  -- 2pac, Fake A$$ B3tcheZ
 #                
 ##########
 
@@ -22,6 +20,9 @@
   become: yes
   become_method: sudo
   tasks: 
+  
+# "It's like I tell my nigg4z, keep your eyes on these b3tches"
+# "They love to G a n1gga young dumb & gettin' riches"  -- 2pac, Fake A$$ B3tcheZ
 
     - name: copy blueprint param_run_container.sh into usable files.
       copy:
