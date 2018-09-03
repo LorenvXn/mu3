@@ -5,7 +5,7 @@
 ############################################
 # for those who still use/read bash... ;) 
 ##########################
-# for the rest of you who dont...  凸( ͡° ͜ʖ ͡°) 
+# for the rest of you who don't...  凸( ͡° ͜ʖ ͡°) 
 ###############
 
 
