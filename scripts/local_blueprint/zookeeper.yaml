@@ -1,5 +1,5 @@
 ##########
-#  yaml configuration file for kafka only
+#  yaml configuration file for zookeeper only
 # 
 # /opt/local_blueprint - folder on master host for blueprint scripts (containers & images scripts)
 #
