@@ -23,7 +23,7 @@
         src: /opt/local_blueprint/blueprint_param_run_container.sh
         owner: tron
         group: tron
-        delegate_to: 127.0.0.1 #nice shit unde ansible 2.6
+        delegate_to: 127.0.0.1 
 
 
     - name: copy blueprint run_image into modified files, specific to server.   
