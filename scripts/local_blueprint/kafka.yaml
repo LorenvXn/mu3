@@ -9,7 +9,9 @@
 # /opt/remote_shift/{kafka; zookeeper; sparl} - remote server folder where modified files from /opt/local_shift &/opt/local_images is copied to
 #
 # this example is done using tron user, change it according to your needs
- 
+#
+# "Say my name three times like Candy Man, bet I roll on ur a$$/ Like an avalanche" - 2pac, Troublesome '96
+#
 
 - hosts: '{{ server }} '   #replace server...add it in extra-vars '{{ server }}'
   remote_user: tron
