@@ -9,8 +9,8 @@
   become_method: sudo
   tasks: 
 
-- include: zookeeper.yaml
-  when: containerimage=="zookeeper"
+  - include: zookeeper.yaml
+    when: containerimage=="zookeeper"
   
-- include: kafka.yaml
-  when: containerimage=="kafka"
+  - include: kafka.yaml
+    when: containerimage=="kafka"
