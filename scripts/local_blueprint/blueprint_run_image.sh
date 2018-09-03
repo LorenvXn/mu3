@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t imagename:tagimage /opt/remote_shift/kafka
+docker build -t containerimage:tagimage /opt/remote_shift/kafka
 
