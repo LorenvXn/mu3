@@ -15,8 +15,8 @@ What to be expected from "educated" men. /shrugs
 ``` 
 
 
-If you are asking yourselves why I did not bother with the usual directories (default, tasks, roles, meta) ... etc,
-well, it's a very boring and corporate approach, and I like chaos.
+If you are asking yourselves why I did not bother with the usual directories (default, tasks, roles, meta) ...    
+well, it's a very boring and corporate approach, and I am a big fan of chaos.
 
 
 Whatevs! Onto the presentation... 
