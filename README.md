@@ -8,7 +8,7 @@
 ```
 My apologies to the outsiders for the (somewhat) brvtal 2pac lyrics as comments, 
 but this "project-sketch" was required by some corporate folks who have no good manners, 
-and they step on self-learners as if nothing wrong could ever happen to them.
+that step on self-learners as if nothing wrong could ever happen to them.
 
 You know that saying: "Ballz is life!" ... well, not in a corporation, bruh! 
 What to be expected from "educated" men. /shrugs
