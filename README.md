@@ -18,27 +18,27 @@
                                       ||
                                       ||
                [[                                              ]]
-   X <---------[[     modify and copy blueprints locally       ]]
+   X◄----------[[     modify and copy blueprints locally       ]]
    |           [[             to /opt/local_shift              ]]
    |                                 
    | 
    |
    |                                                                               /
    ▼                        +-------------------------+                           | param_run_container.sh
-   X----------------------->| /opt/local_shift/kafka  -----[folder now contains]--| 
+   X-----------------------►| /opt/local_shift/kafka  -----[folder now contains]--| 
    |                        +-------------------------+                           | run_image.sh
    |                                                                               \ 
    |                                                                             
    |                                                                                /
    ▼                        +--------------------------+                           | param_run_container.sh
-   X----------------------->|/opt/local_shift/zookeeper-----[folder now contains]--| 
+   X-----------------------►|/opt/local_shift/zookeeper-----[folder now contains]--| 
    |                        +--------------------------+                           | run_image.sh
    |                                                                                \
    |
  [...] 
    |
    ▼
-   X-----------------------> ///   lots of others image ///
+   X-----------------------► ///   lots of others image ///
                              ///  containers scripts    ///
 
       \                                                                                                /  (II.)
@@ -54,7 +54,7 @@
                                                      ||
                                    [[                                      ]]
                                    [[copy everything from /opt/local/shift ]]
-                      <------------[[      under /opt/remote_shift/        ]]
+                      +◄-----------[[      under /opt/remote_shift/        ]]
                       |            [[            ...and build :)           ]]
                       |            [[                                      ]]
                       |                            
@@ -62,7 +62,7 @@
                       |                            
                       |                                                                               /
                       ▼                         +-------------------------+                          | Dockerfile
-                      X------------------------>| /opt/remote_shift/kafka ---[folder contains]-------| run_image.sh
+                      X------------------------►| /opt/remote_shift/kafka ---[folder contains]-------| run_image.sh
                       |                         +-------------------------+                          | param_run_container.sh
                       |                                                   |                           \
                       |                                                   |
@@ -72,7 +72,7 @@
                       |                                                               | 
                       |                                                                                /
                       ▼                       +---------------------------+                           | Dockerfile
-                      X---------------------->|/opt/remote_shift/zookeeper----[folder contains]-------| run_image.sh
+                      X----------------------►|/opt/remote_shift/zookeeper----[folder contains]-------| run_image.sh
                       |                       +---------------------------+                           |param_run_container.sh
                       |                                                   |                            \
                       |                                                   |
@@ -82,7 +82,7 @@
                       |                                                               |
                       |                                      
                       ▼                         ///lots of other images///
-                      X------------------------>/// and containers     ///
+                      X-----------------------► /// and containers     ///
                                                 ///  to build...       ///
 
 ```
