@@ -13,6 +13,12 @@ that step on self-learners as if nothing wrong could ever happen to them.
 You know that saying: "Ballz is life!" ... well, not in a corporation, bruh! 
 What to be expected from "educated" men. /shrugs
 ``` 
+
+
+If you are asking yourselves why I did not bother with the usual directories (default, tasks, roles, meta) ... etc,
+well, it's a very boring and corporate approach, and I like chaos.
+
+
 Whatevs! Onto the presentation... 
 
 <i> Details on the process flow of the scripts in below Muie fig. </i>
