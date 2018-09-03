@@ -85,3 +85,6 @@
 
 ```
 <i> Fig. Muie </i>
+
+(I.) + (II.) - process that takes place on local (master) host
+(III.) - process that takes place on remote host(s)
