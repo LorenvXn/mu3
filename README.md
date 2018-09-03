@@ -4,6 +4,12 @@
 
 <b> Ship a containerized architecture with the help of Ansible 2.6 </b>... <i>because mă-ta! ¯\\_(ツ)_/¯ </i>
 
+My apologies to outsiders for the brvtal 2pac lyrics as comments, but this "project-sketch" was required by some
+corporate folks who have no good manners, and step on self-learners as if nothing wrong could ever happen to them.
+
+
+Whatevs! Onto the presentation... 
+
 <i> Details on the process flow of the scripts in below Muie fig. </i>
 
 ```
