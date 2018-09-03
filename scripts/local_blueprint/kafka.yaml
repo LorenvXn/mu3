@@ -67,7 +67,7 @@
 replace
     - name:  add new name container 
       replace:
-        dest: /opt/local_shift/kafka/param_run_container.sh #I might have to add a an extra folder for every service 'cause reasons!
+        dest: /opt/local_shift/kafka/param_run_container.sh 
         regexp: 'namecontainer'
         replace: '{{ namecontainer }} '
 
