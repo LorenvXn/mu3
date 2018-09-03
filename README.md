@@ -7,7 +7,7 @@
 ```
                                                   /
 +-----------------------+                         | blueprint_run_container.sh
-| /opt/local_blueprint/ |----[folder contains]----|
+| /opt/local_blueprint/ -----[folder contains]----|
 +-----------------------+                         | blueprint_run_image.sh
                                                   \
 \                                                                                /
@@ -22,16 +22,16 @@
                                       ||
                                       ||                                          
                                       ||                                          /     
-                            +-------------------------+                           | Dockerfile 
-                            | /opt/local_shift/kafka  |----[folder now contains]--| param_run_container.sh
+                            +-------------------------+                           | param_run_container.sh
+                            | /opt/local_shift/kafka  -----[folder now contains]--| 
                             +-------------------------+                           | run_image.sh
                                       ||                                          \ 
                                       ||                                          
-                                      ||                                          /
-                            +-------------------------+                           | Dockerfile 
-                            |/opt/local_shift/zookeep.|----[folder now contains]--| param_run_container.sh
-                            +-------------------------+                           | run_image.sh
-                                      ||                                          \
+                                      ||                                           /
+                            +--------------------------+                           | param_run_container.sh
+                            |/opt/local_shift/zookeeper-----[folder now contains]--| 
+                            +--------------------------+                           | run_image.sh
+                                      ||                                           \
                                       ||
                                       ||                                
                         /// lots of others image ///
@@ -40,6 +40,11 @@
                 \                                                                                      /
                  \----------------------------------------\/------------------------------------------/
                                                           ||
+                                                          ||
+                                                          ||
+                                          [[     copy Dockerfiles from      ]]       
+                                          [[       /opt/local_images/       ]]
+                                          [[      to /opt/remote_shift/     ]] 
                                                           ||
                                                           ||
                                                           ||
@@ -53,17 +58,26 @@
                                                           ||
                                                           ||
                                                           ||    
-                                                          ||
-                                                +-------------------------+          |
-                                                | /opt/remote_shift/kafka |----------| building images &containers
-                                                +-------------------------+          | 
-                                                          || 
-                                                          ||
-                                                          ||
-                                                +-------------------------+          |
-                                                | /opt/remote_shift/zooke.|----------| building images &containers
-                                                +-------------------------+          |
-                                                          ||
+                                                          ||                                          /
+                                                +-------------------------+                          | Dockerfile
+                                                | /opt/remote_shift/kafka ---[folder contains]-------| run_image.sh
+                                                +-------------------------+                          | param_run_container.sh
+                                                          ||              |                           \
+                                                          ||              |
+                                                          ||              |
+                                                          ||              |          |
+                                                          ||              +----------| building images &containers
+                                                          ||.                        | 
+                                                          ||                                           /
+                                              +---------------------------+                           | Dockerfile
+                                              |/opt/remote_shift/zookeeper----[folder contains]-------| run_image.sh
+                                              +---------------------------+                           |param_run_container.sh
+                                                          ||              |                            \
+                                                          ||              |
+                                                          ||              |
+                                                          ||              |           | 
+                                                          ||               +----------| building images &containers
+                                                          ||                          |
                                                           ||
                                                 ///lots of other images///
                                                 /// and containers     ///
