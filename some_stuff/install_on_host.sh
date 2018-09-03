@@ -2,8 +2,10 @@
 # not containers related
 # some bash functions to install on a host kafka service
 # it also makes the necessary changes on the host
-############################
+############################################
 # for those who still use/read bash... ;) 
+##########################
+# for the rest of you who dont...  凸( ͡° ͜ʖ ͡°) 
 ###############
 
 
