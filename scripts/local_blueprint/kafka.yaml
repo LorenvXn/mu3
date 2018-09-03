@@ -33,7 +33,7 @@
     - name: copy blueprint run_image into modified files, specific to server.   
       copy:
         dest: /opt/local_shift/kafka/run_image.sh.  
-        src: /opt/local_blueprint/blueprint_run_image.sh 
+        src: /opt/local_blueprint/kafka/blueprint_run_image.sh 
         delegate_to: 127.0.0.1
 
 
