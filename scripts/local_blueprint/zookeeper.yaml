@@ -10,6 +10,10 @@
 # /opt/remote_shift/{kafka; zookeeper; spark} - remote server folder where modified files from /opt/local_shift &/opt/local_images is copied to
 #
 # this example is done using tron user, change it according to your needs
+#
+# "It's like I tell my nigg4z, keep your eyes on these b3tches"
+# "They love to G a n1gga young dumb & gettin' riches"  -- 2pac, Fake A$$ B3tcheZ
+#                
 ##########
 
 
