@@ -64,7 +64,7 @@
     - name: build the image on remotekafka host
       command: bash /opt/remote_shift/kafka/run_image.sh
       
-replace
+
     - name:  add new name container 
       replace:
         dest: /opt/local_shift/kafka/param_run_container.sh 
