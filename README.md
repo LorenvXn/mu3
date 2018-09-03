@@ -2,6 +2,8 @@
 
 <i> in progress </i>
 
+<i> Details on how it works in below Muie fig. </i>
+
 ```
                                                   /
 +-----------------------+                         | blueprint_run_container.sh
@@ -68,3 +70,4 @@
                                                 ///  to build...       ///
 
 ```
+<i> Fig. Muie </i>
