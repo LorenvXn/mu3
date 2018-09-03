@@ -7,7 +7,7 @@
   remote_user: tron
   become: yes
   become_method: sudo
-  tasks: 
+  #tasks: 
 
   - include: zookeeper.yaml
     when: containerimage=="zookeeper"
