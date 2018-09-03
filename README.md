@@ -12,7 +12,7 @@ that step on self-learners as if nothing wrong could ever happen to them.
 (It wasn't actually required, they have no idea what they are doing. I just crafted this approach!)
 
 You know that saying: "Ballz is life!" ... well, not in a corporation, bruh! 
-What to be expected from "educated" men. /shrugs
+What to be expected from educated "men". /shrugs
 ``` 
 
 
