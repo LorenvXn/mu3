@@ -13,7 +13,7 @@
 ##########
 
 
-- hosts: '{{ server }} '   # lots of extra vars on their way, people!
+- hosts: '{{ server }} '  
   remote_user: tron
   become: yes
   become_method: sudo
