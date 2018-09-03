@@ -21,13 +21,13 @@
                                       ||                                          
                                       ||                                          /     
                             +-------------------------+                           | Dockerfile 
-                            | /opt/local_shift/kafka  |----[folder now contains]--| run_container.sh
+                            | /opt/local_shift/kafka  |----[folder now contains]--| param_run_container.sh
                             +-------------------------+                           | run_image.sh
                                       ||                                          \ 
                                       ||                                          
                                       ||                                          /
                             +-------------------------+                           | Dockerfile 
-                            |/opt/local_shift/zookeep.|----[folder now contains]--| run_container.sh
+                            |/opt/local_shift/zookeep.|----[folder now contains]--| param_run_container.sh
                             +-------------------------+                           | run_image.sh
                                       ||                                          \
                                       ||
