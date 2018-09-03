@@ -10,7 +10,6 @@
 #
 # this example is done using tron user, change it according to your needs
 #
-# "Say my name three times like Candy Man, bet I roll on ur a$$/ Like an avalanche" - 2pac, Troublesome '96
 #
 
 - hosts: '{{ server }} '   #replace server...add it in extra-vars '{{ server }}'
@@ -18,6 +17,9 @@
   become: yes
   become_method: sudo
   tasks: 
+  
+  # "Say my name three times like Candy Man, bet I roll on ur as$"
+  # "Like an avalanche" - 2pac, Troublesome '96
 
     - name: copy blueprint param_run_container.sh into usable files.
       copy:
