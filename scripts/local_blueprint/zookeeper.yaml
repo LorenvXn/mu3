@@ -9,9 +9,7 @@
 #
 # /opt/remote_shift/{kafka; zookeeper; spark} - remote server folder where modified files from /opt/local_shift &/opt/local_images is copied to
 #
-# this example is done using tron user, change it according to your needs
-#
-#                
+# this example is done using tron user, change it according to your needs           
 ##########
 
 
