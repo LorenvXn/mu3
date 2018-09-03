@@ -6,7 +6,7 @@
 
 My apologies to outsiders for the brvtal 2pac lyrics as comments, but this "project-sketch" was required by some
 corporate folks who have no good manners, and step on self-learners as if nothing wrong could ever happen to them.
-
+You know  that saying: "Ballz is life!" ... well, not in a corporation, bruh!
 
 Whatevs! Onto the presentation... 
 
