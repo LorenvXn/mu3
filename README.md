@@ -4,7 +4,7 @@
 
 <b> Ship a containerized architecture with the help of Ansible 2.6 </b>... <i>because mă-ta! ¯\\_(ツ)_/¯ </i>
 
-<i> Details on how it works in below Muie fig. </i>
+<i> Details on the process flow of the scripts in below Muie fig. </i>
 
 ```
                                                   /
@@ -94,4 +94,6 @@
 (I.) + (II.) - process flow that takes place on local (master) host 
 <br>
 (III.) - process flow that takes place on remote host(s)
+
+
 
