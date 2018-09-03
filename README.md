@@ -2,7 +2,7 @@
 
 <i> in progress </i>
 
-<b> Ship a containerized architecture with the help of Ansible</b>... <i>because mă-ta! ¯\\_(ツ)_/¯ </i>
+<b> Ship a containerized architecture with the help of Ansible 2.6 </b>... <i>because mă-ta! ¯\\_(ツ)_/¯ </i>
 
 <i> Details on how it works in below Muie fig. </i>
 
