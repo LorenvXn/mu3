@@ -48,11 +48,11 @@
                                                           ||
                                                           ||                          (III.)
                                                           ||
-                                           [[                               ]]
-                                           [[copy everything to remote hosts]]
-                                           [[ under /opt/remote_shift/      ]]
-                                           [[       ...and build :)         ]]
-                                           [[                               ]]
+                                         [[                                      ]]
+                                         [[copy everything from /opt/local/shift ]]
+                                         [[      under /opt/remote_shift/        ]]
+                                         [[            ...and build :)           ]]
+                                         [[                                      ]]
                                                           ||
                                                           ||
                                                           ||
