@@ -53,7 +53,7 @@
                                                      ||                                                   (III.)
                                                      ||
                                    [[                                      ]]
-                                   [[copy everything from /opt/local/shift ]]
+                                   [[copy everything from /opt/local_shift ]]
                       +◄-----------[[      under /opt/remote_shift/        ]]
                       |            [[            ...and build :)           ]]
                       |            [[                                      ]]
