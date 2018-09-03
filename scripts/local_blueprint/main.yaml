@@ -1,6 +1,6 @@
 
 # "if u was half the man ur byatch was" - 2pac, "Ph0Kking with the wrong Nigg4" - 
-# you'd realize it's based on container image conditions
+# you'd realize it's based on multiple conditions (containerimage)
 
 
 - hosts: '{{ server }} '   
