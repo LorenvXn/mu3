@@ -33,7 +33,7 @@
     - name: copy blueprint run_image into modified files, specific to server.   
       copy:
         dest: /opt/local_shift/zookeeper/run_image.sh.  
-        src: /opt/local_blueprint/blueprint_run_image.sh 
+        src: /opt/local_blueprint/zookeeper/blueprint_run_image.sh 
         delegate_to: 127.0.0.1
 
     - name: copy Dockerfile  on remotezookeeper host
