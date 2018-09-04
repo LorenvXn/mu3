@@ -4,16 +4,6 @@
 
 <b> Ship a containerized architecture with the help of Ansible 2.6 </b>... <i>because mă-ta! ¯\\_(ツ)_/¯ </i>
 
-<b>Note:</b>
-```
-My apologies to the outsiders for the (somewhat) brvtal 2pac lyrics as comments, 
-but this "project-sketch" was required by some corporate folks who have no good manners, 
-and these folks step on self-learners as if nothing wrong could ever happen to them.
-(It wasn't actually required, they have no idea what they are doing. I just crafted this approach!)
-
-You know that saying: "Ballz is life!" ... well, not in a corporation, bruh! 
-What to be expected from educated "men". /shrugs
-``` 
 
 
 If you are asking yourselves why I did not bother with the usual directories (default, tasks, roles, meta) ...    
