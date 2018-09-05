@@ -66,32 +66,33 @@
       copy:
         dest: /opt/remote_shift/kafka/
         src: /opt/local_shift/kafka/run_image.sh
-
-
-    - name: build the image on remotekafka host
-      command: bash /opt/remote_shift/kafka/run_image.sh
       
 
     - name:  add new name container 
-      replace:
+      local_action: replace
+      args:
         dest: /opt/local_shift/kafka/param_run_container.sh 
         regexp: 'namecontainer'
         replace: '{{ namecontainer }} '
 
-    - name: replace port host
-      replace:
+    - name:  port host
+      local_action: replace
+      args:
         dest: /opt/local_shift/kafka/param_run_container.sh
         regexp: 'porthost'
         replace: '{{ porthost }}'
 
-    - name: replace port container
-      replace:
+    - name:  port container
+      local_action: replace
+      args:
         dest: /opt/local_shift/kafka/param_run_container.sh
         regexp: 'portcontainer'
         replace: '{{ portcontainer }}'
+ 
     - name: replace tag image
-      replace:
-        dest: /opt/local_shift/param_run_container.sh
+      local_action: replace
+      args:
+        dest: /opt/local_shift/kafka/param_run_container.sh
         regexp: 'tagimage'
         replace: '{{ tagimage }}'
 
@@ -102,6 +103,10 @@
         owner: tron
         group: tron
    
+    - name: build the image on remotekafka host
+      command: bash /opt/remote_shift/kafka/run_image.sh
+      
+      
     - name: start container on remotekafka host
       command: bash /opt/remote_shift/kafka/param_run_container.sh 
 
