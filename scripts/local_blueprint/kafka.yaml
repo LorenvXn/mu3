@@ -53,11 +53,13 @@
         replace: '{{ containerimage }}'
         
   
-    - name: replace to build the image
-      replace:
+    - name: replace tag locally to build the image
+      local_action: replace
+      args:
         dest: /opt/local_shift/kafka/run_image.sh
         regexp: tagimage
         replace: '{{ tagimage }}'
+
 
 
     - name: copy to remotekafka to build image
