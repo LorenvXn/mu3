@@ -45,8 +45,9 @@
         group: tron
 
    
-    - name: replace to build the image
-      replace:
+    - name: replace container image locally to build the image
+      local_action: replace
+      args:
         dest: /opt/local_shift/kafka/run_image.sh
         regexp: containerimage
         replace: '{{ containerimage }}'
