@@ -21,13 +21,13 @@
   # "Say my name three times like Candy Man, bet I roll on ur as$"
   # "Like an avalanche" - 2pac, Troublesome '96
 
-    - name: copy blueprint param_run_container.sh into usable files.
-      copy:
+    - name: copy locally blueprint param_run_container.sh into usable files.
+      local_action: copy
+      args :
         dest: /opt/local_shift/kafka/param_run_container.sh
         src: /opt/local_blueprint/blueprint_param_run_container.sh
         owner: tron
         group: tron
-        delegate_to: 127.0.0.1 
 
 
     - name: copy blueprint run_image into modified files, specific to server.   
