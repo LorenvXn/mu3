@@ -13,82 +13,87 @@
 ##########
 
 
-- hosts: '{{ server }} '  
+
+- hosts: '{{ server }} '   #replace server...add it in extra-vars '{{ server }}'
   remote_user: tron
-  become: yes
+  become: true
   become_method: sudo
   tasks: 
   
-# "It's like I tell my nigg4z, keep your eyes on these b3tches"
-# "They love to G a n1gga young dumb & gettin' riches"  -- 2pac, Fake A$$ B3tcheZ
 
-    - name: copy blueprint param_run_container.sh into usable files.
-      copy:
+    - name: copy locally blueprint param_run_container.sh into usable files.
+      local_action: copy
+      args :
         dest: /opt/local_shift/zookeeper/param_run_container.sh
         src: /opt/local_blueprint/blueprint_param_run_container.sh
         owner: tron
         group: tron
-        delegate_to: 127.0.0.1 
+
 
     - name: copy blueprint run_image into modified files, specific to server.   
-      copy:
-        dest: /opt/local_shift/zookeeper/run_image.sh.  
+      local_action: copy
+      args:
+        dest: /opt/local_shift/zookeeper/run_image.sh  
         src: /opt/local_blueprint/zookeeper/blueprint_run_image.sh 
-        delegate_to: 127.0.0.1
 
     - name: copy Dockerfile  on remotezookeeper host
       copy:
         dest: /opt/remote_shift/zookeeper/
         src: /opt/local_images/zookeeper/Dockerfile
         owner: tron
-        group: tron
-   
-    - name: replace to build the image
-      replace:
+        group: tron  
+
+
+    - name: replace container image locally to build the image
+      local_action: replace
+      args:
         dest: /opt/local_shift/zookeeper/run_image.sh
         regexp: containerimage
         replace: '{{ containerimage }}'
-        
-  
+
     - name: replace to build the image
-      replace:
+      local_action: replace
+      args:
         dest: /opt/local_shift/zookeeper/run_image.sh
         regexp: tagimage
         replace: '{{ tagimage }}'
-
 
     - name: copy to remotezookeeper to build image
       copy:
         dest: /opt/remote_shift/zookeeper/
         src: /opt/local_shift/zookeeper/run_image.sh
 
-
-    - name: build the image on remotezookeeper host
-      command: bash /opt/remote_shift/zookeeper/run_image.sh
-      
-
     - name:  add new name container 
-      replace:
+      local_action: replace
+      args:
         dest: /opt/local_shift/zookeeper/param_run_container.sh 
         regexp: 'namecontainer'
         replace: '{{ namecontainer }} '
 
-    - name: replace port host
-      replace:
+    - name:  port host
+      local_action: replace
+      args:
         dest: /opt/local_shift/zookeeper/param_run_container.sh
         regexp: 'porthost'
         replace: '{{ porthost }}'
 
-    - name: replace port container
-      replace:
+    - name:  port container
+      local_action: replace
+      args:
         dest: /opt/local_shift/zookeeper/param_run_container.sh
         regexp: 'portcontainer'
         replace: '{{ portcontainer }}'
+ 
     - name: replace tag image
-      replace:
-        dest: /opt/local_shift/param_run_container.sh
+      local_action: replace
+      args:
+        dest: /opt/local_shift/zookeeper/param_run_container.sh
         regexp: 'tagimage'
         replace: '{{ tagimage }}'
+
+    - name: list something on remote host
+      command: "ls -ltr /home/tron"
+
 
     - name: copy files from controller to remotezookeeper
       copy:
@@ -96,6 +101,10 @@
         dest: /opt/remote_shift/zookeeper/
         owner: tron
         group: tron
+        
+    - name: build the image on remotezookeeper host
+      command: bash /opt/remote_shift/zookeeper/run_image.sh
+      
    
     - name: start container on remotezookeeper host
       command: bash /opt/remote_shift/zookeeper/param_run_container.sh 
