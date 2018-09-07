@@ -18,8 +18,8 @@
   become_method: sudo
   tasks: 
   
-  # "Say my name three times like Candy Man, bet I roll on ur as$"
-  # "Like an avalanche" - 2pac, Troublesome '96
+  # "Fnl zl anzr guerr gvzrf yvxr Pnaql Zna, org V ebyy ba he nf$"
+  # "Yvxr na ninynapur" - 2cnp, Gebhoyrfbzr '96
 
     - name: copy locally blueprint param_run_container.sh into usable files.
       local_action: copy
