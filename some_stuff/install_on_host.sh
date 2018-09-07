@@ -3,10 +3,6 @@
 # some bash functions to install on a host the kafka service
 # it also makes the necessary changes on the host
 ############################################
-# for those who still use/read bash... ;) 
-##########################
-# for the rest of you who don't...  凸( ͡° ͜ʖ ͡°) 
-###############
 
 
 #!/bin/bash
@@ -81,7 +77,7 @@ install_kafka()
 
 
 #if you have to deal
-#with a useless cr4p like Cloud environment
+#with Cloud environment
 
 modify_zookeeper_host()
 {
