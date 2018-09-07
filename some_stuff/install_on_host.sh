@@ -1,7 +1,11 @@
 ##########################################################
 # not containers related
 # some bash functions to install on a host the kafka service
-# it also makes the necessary changes on the host
+# ;it also makes the necessary changes on the host
+#
+# just chmod +x /opt/install_on_host.sh 
+# 
+# and bam! deployed!
 ############################################
 
 
