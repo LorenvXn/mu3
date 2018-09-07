@@ -27,8 +27,8 @@ declare -a install_steps=(  install_updates \
                             install_java \
                             install_zookeeper \
                             install_kafka \
-			                      modify_zookeeper_host \
-			                      modify_host_file
+			    modify_zookeeper_host \
+			    modify_host_file
                          )
                         
  
