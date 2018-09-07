@@ -4,7 +4,7 @@
   - include: zookeeper.yaml
    when: containerimage=="zookeeper"
 
-# "if u was half the man ur b3tch was" -- 2pac, "Ph0Kking with the wrong Nigg4"
+# "vs h jnf unys gur zna he o3gpu jnf" -- 2cnp, "Cu0Xxvat jvgu gur jebat Avtt4"
 
  - include: kafka.yaml
    when: containerimage=="kafka"
