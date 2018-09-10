@@ -12,7 +12,18 @@
 #
 # run as per example ...
 #
-# ansible-playbook main.yaml  --extra-vars "server=[some host] \
-# containerimage=zookeeper tagimage=v3 \
-# namecontainer=wee porthost=2181 portcontainer=2181" \
-#  -u tron --ask-become-pass -vv
+# # ansible-playbook main.yaml  --extra-vars "server=host1  \
+#   containerimage=zookeeper tagimage=t3 \
+#   namecontainer=wee porthost=2181 portcontainer=2181 amountgb=2G "  -u tron --ask-become-pass -vv
+#
+#
+# The script will be rewritten on remote host as (then run from ansible..etc..)
+#
+# root@host1:/# more /opt/remote_shift/zookeeper/param_run_container.sh 
+# #!/bin/bash
+#
+#  docker create -i -t  --name wee  -p 2181:2181   \
+#  --storage-opt size=2G \
+#  --cap-add=ALL  `docker images | grep t3 | awk {'print $3'} | grep -vi image` /bin/bash
+#  sleep 5
+#  docker start wee 
