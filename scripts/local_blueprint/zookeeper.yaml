@@ -112,7 +112,7 @@
     - name: build the image on remotezookeeper host
       command: bash /opt/remote_shift/zookeeper/run_image.sh
       
-    - name: wait a minute...
+    - name: wait a minute...lmao!
       command: sleep 5
     
     - name: start container on remotezookeeper host
