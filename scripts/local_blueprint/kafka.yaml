@@ -96,6 +96,13 @@
         regexp: 'tagimage'
         replace: '{{ tagimage }}'
 
+    - name: replace amount of size
+      local_action: replace
+      args:
+        dest: /opt/local_shift/zookeeper/param_run_container.sh
+        regexp: 'amountgb'
+        replace: '{{ amountgb }}'
+
     - name: copy files from controller to remotekafka
       copy:
         src: /opt/local_shift/kafka/param_run_container.sh
