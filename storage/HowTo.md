@@ -96,7 +96,7 @@ ls -ltr /var/lib/docker
 lrwxrwxrwx 1 root root 13 Sep  6 11:27 /var/lib/docker -> /blah/data/
 ```
 
-10) Create a container just get wild about the storage option:
+10) Create a container just to get wild about the storage option:
 
 ```
 root@wildhost:~# docker run -it --storage-opt size=3G ubuntu /bin/bash
