@@ -4,6 +4,7 @@ CONTAINER=$1
 KAFKA_IP=$2
 ZOO_IP=$3
 
+#testing - testing -----------------------
 #docker exec $CONTAINER ls
 #lol! such 1337 skillz
 
