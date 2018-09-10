@@ -2,7 +2,7 @@
 
 #you run this after containers creation..dah!
 #you provide the hosts IP on which services were deployed, & not the containers IP
-# dah!
+# might entitle this one prepare_kafka ... or something like that
 
 CONTAINER=$1
 KAFKA_IP=$2
