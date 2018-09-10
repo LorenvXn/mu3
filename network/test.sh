@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#you run this after containers creation..dah!
+#you provide the hosts IP on which services were deployed, & not the containers IP
+# dah!
+
 CONTAINER=$1
 KAFKA_IP=$2
 ZOO_IP=$3
