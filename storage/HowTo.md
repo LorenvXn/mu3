@@ -1,6 +1,6 @@
 
 
-Proceed with following steps:
+<b>Proceed with following steps: </b>
 
 
 1) Install docker  (after updating the system, right? right!)
@@ -43,6 +43,7 @@ service docker stop
 ```
 
 5) Configure overlay2 storage driver:
+
 a) Create daemon.json
 ```
 touch /etc/docker/daemon.json
@@ -55,19 +56,19 @@ and add following content:
 }
 ```
 
-5.1) start service docker just to check the service can be brought up without errors
+5.1) start service docker just to check the service can be brought up without errors:
 
 ```
 service docker start 
 ```
 
-6) Stop docker again
+6) Stop docker again:
 
 ```
 service docker stop
 ```
 
-7) Time to move and symlink the docker files to new /blah
+7) Time to move and symlink the docker files to new /blah:
 
 ```
 mkdir /blah/data
@@ -86,7 +87,7 @@ service docker start
 
 9) Check if everything is alright:
 ```
-root@wildhost#docker info | grep -iE 'storage driver|backing filesystem'
+root@wildhost# docker info | grep -iE 'storage driver|backing filesystem'
 Storage Driver: overlay2
  Backing Filesystem: xfs
 ```
