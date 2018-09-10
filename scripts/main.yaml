@@ -11,5 +11,8 @@
    
 #
 # run as per example ...
-# ansible-playbook main.yaml  --extra-vars "server=[some IP] containerimage=zookeeper tagimage=h3 namecontainer=waaee porthost=2182 portcontainer=2182"  -u tron --ask-pass -vv
 #
+# ansible-playbook main.yaml  --extra-vars "server=[some host] \
+# containerimage=zookeeper tagimage=v3 \
+# namecontainer=wee porthost=2181 portcontainer=2181" \
+#  -u tron --ask-become-pass -vv
