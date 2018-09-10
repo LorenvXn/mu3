@@ -2,4 +2,4 @@
 
 Use whatever other storage type if you hate your own life. 
 
->>> must add to this folder howto tutorial. 
+>>> read howto tutorial from this folder for more details
