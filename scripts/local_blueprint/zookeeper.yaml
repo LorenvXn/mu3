@@ -90,6 +90,13 @@
         dest: /opt/local_shift/zookeeper/param_run_container.sh
         regexp: 'tagimage'
         replace: '{{ tagimage }}'
+        
+    - name: replace amount of size
+      local_action: replace
+      args:
+        dest: /opt/local_shift/zookeeper/param_run_container.sh
+        regexp: 'amountgb'
+        replace: '{{ amountgb }}'
 
     - name: list something on remote host
       command: "ls -ltr /home/tron"
