@@ -159,7 +159,9 @@ root@master:/opt# tree /opt/play
 <b> c.2) Folders ierarchy on remote hosts </b>
 
 
-Subfolder <b> /opt/remote_shift </b> contains the following, while running anisible playbooks:
+Subfolder <b> /opt/remote_shift </b> contains the the modified &copied scripts from master host (/opt/local_shift location).
+The deployment of the services will be done from the ansible playbooks, as well. 
+
 ```
 root@remote:~# tree /opt/remote_shift/
 /opt/remote_shift/
