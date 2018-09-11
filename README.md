@@ -2,7 +2,7 @@
 
 <i> still working on it... </i>
 
-How this approach works:
+<b> a) How this approach works: </b>
 
 ```
 
@@ -52,9 +52,21 @@ How this approach works:
 
 ```
 
+</br> 
+
 For more details on scripts flow, check the diagram: [Diagram Flow](https://github.com/LorenvXn/mu3/blob/master/flow.txt) 
 
-<b> Folders ierarchy on master host </b>
+</br> 
+
+<b> b) Storage approach </b>
+
+OverlayFS approach for persistance  - check [Storage - HowTo](https://github.com/LorenvXn/mu3/blob/master/storage/HowTo.md) for more details
+
+</br> 
+<b> c) Folders ierarchy </b>
+ </br>
+ 
+<b> c.1) Folders ierarchy on master host </b>
 
 Folder <b>/opt</b> contains the following: 
 ```
@@ -143,7 +155,7 @@ root@master:/opt# tree /opt/play
 
 ```
 
-<b> Folders ierarchy on remote hosts </b>
+<b> c.2) Folders ierarchy on remote hosts </b>
 
 
 Subfolder <b> /opt/remote_shift </b> contains the following, while running anisible playbooks:
@@ -171,6 +183,6 @@ root@remote:~# tree /opt/remote_shift/
 ```
 
 
-
+<i> Networking approach - soon </i> 
 
 
