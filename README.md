@@ -108,7 +108,7 @@ root@master:/opt# tree /opt/local_blueprint/
 
 ```
 
-Subfolder  <b> opt/local_shift </b> contains the following: 
+Subfolder  <b> /opt/local_shift </b> contains the following: 
 
 ```
 root@master# tree /opt/local_shift/
