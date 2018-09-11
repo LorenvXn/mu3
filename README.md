@@ -1,5 +1,6 @@
 <i> still working on it... </i>
 
+For more details on flow, check the diagram: [Diagram Flow](https://github.com/LorenvXn/mu3/blob/master/flow.txt) 
 
 <b> Folders ierarchy on master host </b>
 
