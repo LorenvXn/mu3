@@ -33,8 +33,11 @@ root@master#tree -d /opt
 │   └── n-th folder of the service you need to deploy
 ├── play
 ├── remote_shift           // only if you want to deploy services on master 
-│   ├── kafka
-│   └── zookeeper
+    ├── kafka
+    └── zookeeper
+    .
+    .
+    .
 ```
 
 /opt/local_blueprint
