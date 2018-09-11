@@ -2,7 +2,11 @@
 
 <i> still working on it... </i>
 
-For more details on flow, check the diagram: [Diagram Flow](https://github.com/LorenvXn/mu3/blob/master/flow.txt) 
+How this approach works:
+
+![ScreenShot](https://github.com/Satanette/test/blob/master/concon.png)
+
+For more details on scripts flow, check the diagram: [Diagram Flow](https://github.com/LorenvXn/mu3/blob/master/flow.txt) 
 
 <b> Folders ierarchy on master host </b>
 
