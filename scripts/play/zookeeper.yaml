@@ -118,4 +118,4 @@
     - name: start container on remotezookeeper host
       command: bash /opt/remote_shift/zookeeper/param_run_container.sh 
       
-      ## add here some wild remove ... 
+
