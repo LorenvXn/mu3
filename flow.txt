@@ -1,5 +1,5 @@
  
- >>> run main.yaml ansible playbook from /opt/play subfolder
+ ****** run main.yaml ansible playbook from /opt/play subfolder
  
                                                   /
 +-----------------------+                         | blueprint_run_container.sh
