@@ -120,5 +120,3 @@
       command: bash /opt/remote_shift/kafka/param_run_container.sh 
 
 
- #   -name: remove modified files from controller
- #    command: rm /opt/local_shift/kafka/*
