@@ -56,7 +56,7 @@ For more details on scripts flow, check the diagram: [Diagram Flow](https://gith
 
 <b> Folders ierarchy on master host </b>
 
-What <b>/opt</b> folder contains:
+Folder <b>/opt</b> contains the following: 
 ```
 root@master#tree -d /opt
 /opt
@@ -93,7 +93,7 @@ root@master#tree -d /opt
     .
 ```
 
-/opt/local_blueprint
+Subfolder <b> /opt/local_blueprint </b> contains the following: 
 
 ```
 root@master:/opt# tree /opt/local_blueprint/
@@ -108,7 +108,7 @@ root@master:/opt# tree /opt/local_blueprint/
 
 ```
 
-What <b> opt/local_shift </b> subfolder contains:
+Subfolder  <b> opt/local_shift </b> contains the following: 
 
 ```
 root@master# tree /opt/local_shift/
@@ -128,7 +128,7 @@ root@master# tree /opt/local_shift/
 
 ```
 
-What <b> /opt/play </b> subfolder contains:
+Subfolder <b> /opt/play </b> contains the following: 
 
 ```
 root@master:/opt# tree /opt/play
@@ -146,7 +146,7 @@ root@master:/opt# tree /opt/play
 <b> Folders ierarchy on remote hosts </b>
 
 
-What <b> /opt/remote_shift </b> subfolder contains
+Subfolder <b> /opt/remote_shift </b> contains the following: 
 ```
 root@remote:~# tree /opt/remote_shift/
 /opt/remote_shift/
