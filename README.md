@@ -60,7 +60,7 @@ root@master# tree /opt/local_shift/
 ├── kafka
 │   ├── param_run_container.sh
 │   └── run_image.sh
-└── zookeeper
+├── zookeeper
 │   ├── param_run_container.sh
 │   └── run_image.sh
 .
