@@ -146,7 +146,7 @@ root@master:/opt# tree /opt/play
 <b> Folders ierarchy on remote hosts </b>
 
 
-Subfolder <b> /opt/remote_shift </b> contains the following: 
+Subfolder <b> /opt/remote_shift </b> contains the following, while running anisible playbooks:
 ```
 root@remote:~# tree /opt/remote_shift/
 /opt/remote_shift/
