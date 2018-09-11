@@ -5,7 +5,7 @@
 
 1) Install docker  (after updating the system, right? right!)
 ```
-apt-get install docker.io </b>
+apt-get install docker.io 
 ```
 
 2) Format new disk  (let's say /dev/sdb, shall we?) to xfs:
