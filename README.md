@@ -1,5 +1,7 @@
 <b> Ship a containerized architecture with the help of Ansible 2.6 </b>
 
+> Make sure the content from scripts will be under /opt folder on master host
+
 <i> still working on it... </i>
 
 <b> a) How this approach works: </b>
