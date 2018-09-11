@@ -6,7 +6,7 @@ For more details on flow, check the diagram: [Diagram Flow](https://github.com/L
 
 <b> Folders ierarchy on master host </b>
 
-/opt folder:
+What <b>/opt</b> folder contains:
 ```
 root@master#tree -d /opt
 /opt
@@ -58,7 +58,7 @@ root@master:/opt# tree /opt/local_blueprint/
 
 ```
 
-/opt/local_shift
+What <b> opt/local_shift </b> subfolder contains:
 
 ```
 root@master# tree /opt/local_shift/
@@ -78,7 +78,7 @@ root@master# tree /opt/local_shift/
 
 ```
 
-/opt/play
+What <b> /opt/play </b> subfolder contains:
 
 ```
 root@master:/opt# tree /opt/play
@@ -96,7 +96,7 @@ root@master:/opt# tree /opt/play
 <b> Folders ierarchy on remote hosts </b>
 
 
-/opt/remote_shift
+What <b> /opt/remote_shift </b> subfolder contains
 ```
 root@remote:~# tree /opt/remote_shift/
 /opt/remote_shift/
