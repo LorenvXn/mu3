@@ -73,3 +73,10 @@
                       ▼                         ///lots of other images///
                       X-----------------------► /// and containers     ///
                                                 ///  to build...       ///
+                                                
+                                                
+                                                
+**********************
+
+I + II - on master host
+III  - on remote host
