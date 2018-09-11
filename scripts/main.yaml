@@ -1,6 +1,5 @@
 
 
-
   - include: zookeeper.yaml
    when: containerimage=="zookeeper"
 
@@ -8,7 +7,11 @@
 
  - include: kafka.yaml
    when: containerimage=="kafka"
-   
+ 
+ 
+ # include: whatevsService.yaml
+ #  when: containerimage=="whatevsService"
+ 
 #
 # run as per example ...
 #
