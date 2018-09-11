@@ -4,7 +4,53 @@
 
 How this approach works:
 
-![ScreenShot](https://github.com/Satanette/test/blob/master/concon.png)
+```
+
+		   +-----------------------------+
+		   |			         |
+		   |   Blueprint of scripts      |
+		   |	and Dockerfiles          |
+		   |			         |	
+	           +--------------+--------------+	
+				  |
+				  |
+				  |
+			          |
+		   +-----------------------------+
+		   |			         |
+		   |  Conditional main.yaml      |   	 
+		   |     entire flow depends     |
+		   |     on the image name       |
+                   +--------------+--------------+
+				  | 
+				  |
+				  |
+				  |
+ +--------------------------------------------------------------------+
+ |    user can choose the storage amount,remote host IP, tag image,   |
+ |                             port host,    			      | 
+ |                port container, and name container                  |
+ +--------------------------------------------------------------------+
+			          |	
+				  |
+				  |
+   +------------------------------+------------------------------+
+   |			          |			         |
+   |			          |			         |
+   +------------+		  +------------+.                +------------+
+   | image  A   | 	  . . .   | image Y    |	         | image Z    |  
+   +------------+		  +------------+                 +------------+
+   |			          |			         |
+   |- container a1   . . .        |- container y1                |- container z1 
+   |- container a2   . . .	  |- container y2                |- container z2
+   .			          .			         .
+   .                              .			         .
+   .			          .			         .
+   |- container an   . . .	  |- container yn	         |- container zn
+
+
+
+```
 
 For more details on scripts flow, check the diagram: [Diagram Flow](https://github.com/LorenvXn/mu3/blob/master/flow.txt) 
 
