@@ -64,6 +64,7 @@ OverlayFS approach for persistance  - check [Storage - HowTo](https://github.com
 
 </br> 
 <b> c) Folders ierarchy </b>
+
  </br>
  
 <b> c.1) Folders ierarchy on master host </b>
