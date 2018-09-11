@@ -105,7 +105,7 @@ root@master#tree -d /opt
     .
 ```
 
-Subfolder <b> /opt/local_blueprint </b> contains the following: 
+Subfolder <b> /opt/local_blueprint </b> contains the blueprint scripts of services
 
 ```
 root@master:/opt# tree /opt/local_blueprint/
@@ -120,7 +120,8 @@ root@master:/opt# tree /opt/local_blueprint/
 
 ```
 
-Subfolder  <b> /opt/local_shift </b> contains the following: 
+Subfolder  <b> /opt/local_shift </b> contains the modified scripts of services,
+that will copied to remote hosts:
 
 ```
 root@master# tree /opt/local_shift/
@@ -140,7 +141,7 @@ root@master# tree /opt/local_shift/
 
 ```
 
-Subfolder <b> /opt/play </b> contains the following: 
+Subfolder <b> /opt/play </b> contains the ansible playbooks:
 
 ```
 root@master:/opt# tree /opt/play
