@@ -1,1 +1,1 @@
-For those who hate terminals
+For those who hate dem terminals, but wanna use Python
