@@ -23,3 +23,6 @@ ansible-playbook zookeeper.yaml --extra-vars "containername=zooky, [...etc...] "
 python zookeeper.py "{\"containername\" : \"zooky\", [...etc...] }" 
 ```
 
+
+Check [test_py3](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/test_py3.ipynb) for a brief example - it deploys changes on a known file,</br>
+by  using modules shell (for cat) and regexp (for word replacement). 
