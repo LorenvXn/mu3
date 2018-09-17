@@ -89,10 +89,10 @@ play_source_one = dict (
         gather_facts = 'yes',
         tasks = [
                  dict(action=dict(module='copy',
-		 dest='/opt/local_shift/zookeeper/param_run_container.sh',
-                 src='/opt/local_blueprint/blueprint_param_run_container.sh',
-		 owner='tron',
-		 group='tron'))
+		 		  dest='/opt/local_shift/zookeeper/param_run_container.sh',
+                		  src='/opt/local_blueprint/blueprint_param_run_container.sh',
+				  owner='tron',
+		 		  group='tron'))
                  ])
 
 playOne=Play().load(play_source_one, variable_manager=variable_manager, loader=loader)
@@ -104,10 +104,10 @@ play_source_two = dict (
         gather_facts = 'yes',
         tasks = [
                  dict(action=dict(module='copy',
-		 dest='/opt/local_shift/zookeeper/param_run_container.sh',
-                 src='/opt/local_blueprint/blueprint_param_run_container.sh',
-		 owner='tron',
-		 group='tron'))
+		 		  dest='/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  src='/opt/local_blueprint/blueprint_param_run_container.sh',
+		 		  owner='tron',
+		 		  group='tron'))
                  ])
 
 playTwo=Play().load(play_source_two, variable_manager=variable_manager, loader=loader)
@@ -119,14 +119,29 @@ play_source_three = dict(
         gather_facts = 'yes',
         tasks = [
                  dict(action=dict(module='copy',
-		 dest='/opt/remote_shift/zookeeper/',
-                 src=' /opt/local_images/zookeeper/Dockerfile',
-		 owner='tron',
-		 group='tron'))
+		 		  dest='/opt/remote_shift/zookeeper/',
+                 		  src=' /opt/local_images/zookeeper/Dockerfile',
+		 		  owner='tron',
+		 		  group='tron'))
                  ])
 	
 playThree = Play().load(play_source_three, variable_manager=variable_manager, loader=loader)
 
+
+
+play_source_four = dict (
+	name = "replace container image locally to build the image",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module='replace',
+                 		  path='/opt/local_shift/zookeeper/run_image.sh',
+                 		  regexp='container',
+		 		  replace = '{{ container }}' ))
+				 
+                 ])
+
+playFour = Play().load(play_source_three, variable_manager=variable_manager, loader=loader)
 
 
 
