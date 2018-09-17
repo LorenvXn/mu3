@@ -136,8 +136,8 @@ play_source_four = dict (
 	tasks = [
 		 dict(action=dict(module = 'replace',
                  		  path = '/opt/local_shift/zookeeper/run_image.sh',
-                 		  regexp = 'container',
-		 		  replace = '{{ container }}' ))
+                 		  regexp = 'containerimage',
+		 		  replace = '{{ containerimage }}' ))
 				 
                  ])
 
