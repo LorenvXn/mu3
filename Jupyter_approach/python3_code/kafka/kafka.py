@@ -195,7 +195,6 @@ play_source_seven = dict (
 
 playSeven = Play().load(play_source_seven, variable_manager=variable_manager, loader=loader)
 
-#ports...aaaaah!!!
 
 play_source_eight = dict (
         name = " port host ",
@@ -318,7 +317,7 @@ play_source_fiftteen = dict (
 playFifteen = Play().load(play_source_fiftteen, variable_manager=variable_manager, loader=loader)
 
 
-#queue'em, and run'em
+#queue'em, and run dem playbooks
 
 final = TaskQueueManager(
              inventory=inventory,
@@ -329,14 +328,18 @@ final = TaskQueueManager(
              stdout_callback='default',
            )
 
-#
+######
 # this approach of running playbooks takes too long:
-# resultz = [ playOne, playTwo,...]
-# for result in resultz
-#       run_playbooks = final.run(result)
+#
+# + resultz = [ playOne, playTwo,...]
+# + for result in resultz
+#        + run_playbooks = final.run(result)
+#
 
+#########
 #the tedious approach, 
 # yet benevolent when troubleshooting any future changes
+#
 
 resultOne = final.run(playOne)
 
