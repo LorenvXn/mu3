@@ -67,6 +67,7 @@ options = Options(listtags=False,
 
 passwords = {}
 
+#plain and simple approach
 
 filename="/opt/test/conf.json"  # make sure you change the path accordingly
 
@@ -79,4 +80,50 @@ data = json.loads(confile)
 variable_manager.extra_vars=data
 
 variable_manager.set_inventory(inventory)
+
+#Playbooks
+
+play_source_one = dict (
+        name = "copy locally blueprint param_run_container.sh into usable files.",
+        hosts = '{{ master }}',
+        gather_facts = 'yes',
+        tasks = [
+                 dict(action=dict(module='copy',
+		 dest='/opt/local_shift/zookeeper/param_run_container.sh',
+                 src='/opt/local_blueprint/blueprint_param_run_container.sh',
+		 owner='tron',
+		 group='tron'))
+                 ])
+
+playOne=Play().load(play_source_one, variable_manager=variable_manager, loader=loader)
+
+
+play_source_two = dict (
+        name = "copy blueprint run_image into modified files, specific to server.",
+        hosts = '{{ master }}',
+        gather_facts = 'yes',
+        tasks = [
+                 dict(action=dict(module='copy',
+		 dest='/opt/local_shift/zookeeper/param_run_container.sh',
+                 src='/opt/local_blueprint/blueprint_param_run_container.sh',
+		 owner='tron',
+		 group='tron'))
+                 ])
+
+playTwo=Play().load(play_source_two, variable_manager=variable_manager, loader=loader)
+
+
+play_source_three = dict(
+	name = "copy Dockerfile  on remotezookeeper host",
+        hosts = '{{ minion4 }}',
+        gather_facts = 'yes',
+        tasks = [
+                 dict(action=dict(module='copy',
+		 dest='/opt/remote_shift/zookeeper/',
+                 src=' /opt/local_images/zookeeper/Dockerfile',
+		 owner='tron',
+		 group='tron'))
+                 ])
+	
+playThree = Play().load(play_source_three, variable_manager=variable_manager, loader=loader)
 
