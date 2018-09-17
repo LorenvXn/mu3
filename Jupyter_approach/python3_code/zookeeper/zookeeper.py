@@ -219,23 +219,6 @@ play_source_nine = dict (
 playNine = Play().load(play_source_nine, variable_manager=variable_manager, loader=loader)
 
 
-
-
-play_source_ten = dict (
-	name = " add new name container ",
-	hosts = '{{ master }}',
-	gather_facts = 'yes',
-	tasks = [
-		 dict(action=dict(module = 'replace',
-                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
-                 		  regexp = 'portcontainer',
-		 		  replace = '{{ portontainer }}' ))
-				 
-                 ])
-
-playTen = Play().load(play_source_ten, variable_manager=variable_manager, loader=loader)
-
-
 play_source_eleven = dict (
 	name = " replace tag image ",
 	hosts = '{{ master }}',
@@ -365,8 +348,6 @@ resultSeven = final.run(playSeven)
 resultEight = final.run(playEight)
 
 resultNine = final.run(playNine)
-
-resultTen = final.run(playTen)
 
 resultEleven= final.run(playEleven)
 
