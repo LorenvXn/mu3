@@ -62,4 +62,4 @@ just by using the jupyter notebooks. No need for terminals.
 <b>Notes </b> </br>
 Obviously, you have to run the jupyter notebook with the ansible user. Eh!
 
-And more obvious, keep in mind the hierarchy of folders for this approach - there won't be necessary a play/ folder for ansible playbooks. 
+And more obvious, keep in mind the hierarchy of folders for this approach - there won't be necessary a play/ folder for ansible playbooks -- everything is done in python now.
