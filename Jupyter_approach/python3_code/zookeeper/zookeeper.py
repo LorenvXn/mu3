@@ -122,7 +122,7 @@ try:
         open(FILE3, 'r')
         print "file", FILE3,  " exists"
 except IOError:
-        print('no kafka Dockerfile %s found. Check path/filename again' % FILE3)
+        print('no zookeeper Dockerfile %s found. Check path/filename again' % FILE3)
         sys.exit()
 
 
