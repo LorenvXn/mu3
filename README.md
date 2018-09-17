@@ -1,8 +1,10 @@
 <b> Ship a containerized architecture with the help of Ansible 2.6 </b>
+(<i> still working on it... </i>)
 
 > Make sure the content from scripts will be under /opt folder on master host
 
-<i> still working on it... </i>
+<i> Bonus: </i> Now, you can easily ship it with Ansible Python3 API: [Python 3 and Jupyter](https://github.com/LorenvXn/mu3/tree/master/Jupyter_approach)
+
 
 <b> a) How this approach works: </b>
 
