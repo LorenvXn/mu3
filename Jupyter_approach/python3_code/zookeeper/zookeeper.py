@@ -188,6 +188,68 @@ play_source_seven = dict (
 
 playSeven = Play().load(play_source_seven, variable_manager=variable_manager, loader=loader)
 
+
+play_source_eight = dict (
+	name = " add new name container ",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  regexp = 'portcontainer',
+		 		  replace = '{{ portontainer }}' ))
+				 
+                 ])
+
+playEight = Play().load(play_source_eight, variable_manager=variable_manager, loader=loader)
+
+
+play_source_nine = dict (
+	name = " replace tag image ",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  regexp = 'tagimage',
+		 		  replace = '{{ tagimage }}' ))
+				 
+                 ])
+
+playNine = Play().load(play_source_nine, variable_manager=variable_manager, loader=loader)
+
+
+play_source_ten = dict (
+	name = " replace storage amount size",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  regexp = 'amountgb',
+		 		  replace = '{{ amountgb }}' ))
+				 
+                 ])
+
+playTen = Play().load(play_source_ten, variable_manager=variable_manager, loader=loader)
+
+
+play_source_eleven = dict(
+	name = "copy files from controller to remotezookeeper",
+        hosts = '{{ minion4 }}',
+        gather_facts = 'yes',
+        tasks = [
+                 dict(action=dict(module='copy',
+		 		  dest = '/opt/remote_shift/zookeeper/',
+                 		  src = '/opt/local_shift/zookeeper/param_run_container.sh',
+		 		  owner = 'tron',
+		 		  group = 'tron'))
+                 ])
+
+playEleven = Play().load(play_source_eleven, variable_manager=variable_manager, loader=loader)
+
+
+
 [... to be continued ... ]
 
 final = TaskQueueManager(
