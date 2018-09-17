@@ -127,3 +127,21 @@ play_source_three = dict(
 	
 playThree = Play().load(play_source_three, variable_manager=variable_manager, loader=loader)
 
+
+
+
+[... to be continued ... ]
+
+final = TaskQueueManager(
+             inventory=inventory,
+             variable_manager=variable_manager,
+             loader=loader,
+             options=options,
+             passwords=passwords,
+             stdout_callback='default',
+           )
+
+
+#resultz = [ playOne, playTwo,...]
+# for result in resultz
+#	bam = final.run(result)
