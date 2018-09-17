@@ -54,3 +54,5 @@ by  using modules shell (for cat) and regexp (for word replacement).
 
 This approach will allow the user to run changes from master node,</br>
 just by using the jupyter notebooks. No need for terminals. 
+
+Obviously, you have to run the jupyter notebook with the ansible user. Eh!
