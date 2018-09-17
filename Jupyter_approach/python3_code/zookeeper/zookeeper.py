@@ -330,14 +330,18 @@ final = TaskQueueManager(
              stdout_callback='default',
            )
 
-#
+######
 # this approach of running playbooks takes too long:
-# resultz = [ playOne, playTwo,...]
-# for result in resultz
-#	run_playbooks = final.run(result)
+#
+# + resultz = [ playOne, playTwo,...]
+# + for result in resultz
+#        + run_playbooks = final.run(result)
+#
 
+#########
 #the tedious approach, 
 # yet benevolent when troubleshooting any future changes
+#
 
 resultOne = final.run(playOne)
 
