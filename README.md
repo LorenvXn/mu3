@@ -3,9 +3,12 @@
 
 > Make sure the content from scripts will be under /opt folder on master host
 
+<br>
+<br>
+
 <i> Bonus: </i> Now, you can easily ship it with Ansible Python3 API: [Python 3 and Jupyter](https://github.com/LorenvXn/mu3/tree/master/Jupyter_approach)
 
-
+<br>
 <b> a) How the Ansible approach does work: </b>
 
 ```
