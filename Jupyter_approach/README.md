@@ -27,7 +27,7 @@ Or, just use a json file.
 
 
 
-<i> snip code can be successfully applied in below example </i>
+<i> snip code can be successfully applied to the brief example (test_py3)</i>
 </br>
 <i> Just modify the code before passing the data to variable_manager as extra_vars. </i>
 </br>
