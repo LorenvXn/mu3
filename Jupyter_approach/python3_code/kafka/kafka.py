@@ -119,10 +119,10 @@ except IOError:
       
 
 FILE3 = "/opt/local_images/kafka/Dockerfile"
-print "#### check existence of blueprint ", FILE2, " to change ### "
+print "#### check existence of blueprint ", FILE3, " to change ### "
 try:
-        open(FILE2, 'r')
-        print "file", FILE2,  " exists"
+        open(FILE3, 'r')
+        print "file", FILE3,  " exists"
 except IOError:
         print('no kafka Dockerfile %s found. Check path/filename again' % FILE3)
         sys.exit()
