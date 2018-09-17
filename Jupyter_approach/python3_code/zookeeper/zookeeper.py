@@ -249,8 +249,45 @@ play_source_eleven = dict(
 playEleven = Play().load(play_source_eleven, variable_manager=variable_manager, loader=loader)
 
 
+play_source_twelve = dict (
+     name = "build the image on remotezookeeper host",
+     hosts = '{{ minion4 }}',
+     gather_facts = 'yes',
+     tasks = [
+  		 dict(action=dict(module='shell', args='bash /opt/remote_shift/zookeeper/run_image.sh'), register='shell_out'),
+  		 dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
 
-[... to be continued ... ]
+         ])
+
+playTwelve = Play().load(play_source_twelve, variable_manager=variable_manager, loader=loader)
+
+
+play_source_thirteen = dict (
+     name = " wait a minute...lmao!",
+     hosts = '{{ minion4 }}',
+     gather_facts = 'yes',
+     tasks = [
+  		 dict(action=dict(module='shell', args='sleep 5'), register='shell_out'),
+  		 dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+
+         ])
+
+playThirteen = Play().load(play_source_thirteen, variable_manager=variable_manager, loader=loader)
+
+play_source_fourteen = dict (
+     name = " start container on remotezookeeper host ",
+     hosts = '{{ minion4 }}',
+     gather_facts = 'yes',
+     tasks = [
+  		 dict(action=dict(module='shell', args='bash /opt/remote_shift/zookeeper/param_run_container.sh '), register='shell_out'),
+  		 dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+
+         ])
+
+playFourteen = Play().load(play_source_fourteen, variable_manager=variable_manager, loader=loader)
+
+
+#queue'em, and run'em
 
 final = TaskQueueManager(
              inventory=inventory,
@@ -260,6 +297,7 @@ final = TaskQueueManager(
              passwords=passwords,
              stdout_callback='default',
            )
+
 
 
 #
