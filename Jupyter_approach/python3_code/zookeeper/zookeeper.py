@@ -76,10 +76,16 @@ options = Options(listtags=False,
 passwords = {}
 
 #plain and simple approach
+#some exceptions to make life easier... 
 
-filename="conf.json"  # make sure you change the path accordingly
-
-jj=open(filename, 'r')
+FILE="conf.json"
+print "##### check if configuration file", FILE, " exists ######"
+try:
+        jj=open("conf.js", 'r')
+        print "configuration file ", FILE, " exists"
+except IOError:
+        print('no file %s found. check path/filename again' % FILE)
+        sys.exit()
 
 confile=jj.read()
 
@@ -88,6 +94,37 @@ data = json.loads(confile)
 variable_manager.extra_vars=data
 
 variable_manager.set_inventory(inventory)
+
+
+FILE1 = "/opt/zookeeper/blueprint_run_image.sh"
+print "#### check existence of blueprint ", FILE1, " to change ### "
+try:
+        open(FILE1, 'r')
+        print "file", FILE1,  " exists"
+except IOError:
+        print('no configuration file %s found. Check path/filename again' % FILE1)
+        sys.exit()
+
+
+FILE2 = "/opt/local_blueprint/blueprint_param_run_container.sh"
+print "#### check existence of blueprint ", FILE2, " to change ### "
+try:
+        open(FILE2, 'r')
+        print "file", FILE2,  " exists"
+except IOError:
+        print('no configuration file %s found. Check path/filename again' % FILE2)
+        sys.exit()
+      
+
+FILE3 = "/opt/local_images/zookeeper/Dockerfile"
+print "#### check existence of blueprint ", FILE3, " to change ### "
+try:
+        open(FILE3, 'r')
+        print "file", FILE3,  " exists"
+except IOError:
+        print('no kafka Dockerfile %s found. Check path/filename again' % FILE3)
+        sys.exit()
+
 
 #Playbooks
 
