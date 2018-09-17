@@ -44,6 +44,10 @@ data = json.loads(confile)
 <i> where hehe.json contains line:</i>  { "weather" : "news" }
  </br>
  
+ The kafka and zookeeper configuration is done with the help of json files, and not passing json as argument. 
+ Feel free to change the code accordingly, and make it run from Jupyter notebooks.
+ 
+ <br>
  
 <b> Brief Example </b></br>
 Check [test_py3](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/test_py3.ipynb) for a brief example - it deploys changes on a known file,</br>
@@ -56,3 +60,5 @@ This approach will allow the user to run changes from master node,</br>
 just by using the jupyter notebooks. No need for terminals. 
 
 Obviously, you have to run the jupyter notebook with the ansible user. Eh!
+
+And more obvious, keep in mind the hierarchy of folders under this case - there won't be necessary a play/ folder for ansible playbooks. 
