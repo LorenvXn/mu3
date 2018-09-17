@@ -6,7 +6,7 @@
 <i> Bonus: </i> Now, you can easily ship it with Ansible Python3 API: [Python 3 and Jupyter](https://github.com/LorenvXn/mu3/tree/master/Jupyter_approach)
 
 
-<b> a) How the Ansible approach works: </b>
+<b> a) How the Ansible approach does work: </b>
 
 ```
 
