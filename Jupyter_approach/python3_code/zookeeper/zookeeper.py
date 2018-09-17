@@ -313,6 +313,9 @@ final = TaskQueueManager(
 # for result in resultz
 #	run_playbooks = final.run(result)
 
+#the tedious approach, 
+# yet benevolent when of troubleshooting any future changes
+
 resultOne = final.run(playOne)
 
 resultTwo = final.run(playTwo)
