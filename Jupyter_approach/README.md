@@ -44,8 +44,8 @@ data = json.loads(confile)
 <i> where hehe.json contains line:</i>  { "weather" : "news" }
  </br>
  
- The kafka and zookeeper configuration is done with the help of json files, and not passing json as argument. 
- Feel free to change the code accordingly, and make it run from Jupyter notebooks.
+ The kafka and zookeeper configuration is done with the help of json files, and not by passing json as argument. 
+ Feel free to change the code accordingly, to make it run from Jupyter notebooks.
  
  <br>
  
