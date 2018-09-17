@@ -1,0 +1,8 @@
+{ "server": "<insert here master IP>",
+  "minion2":"<insert here minion4 IP",
+  "containerimage" : "kafka",
+  "tagimage" : "p3",
+  "namecontainer" : "kaf",
+  "porthost" : "9092",
+  "portcontainer" : "9092",
+  "amountgb" : "4G"}
