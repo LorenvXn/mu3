@@ -59,6 +59,7 @@ by  using modules shell (for cat) and regexp (for replacing a certain word).
 This approach will allow the user to run changes from master node,</br>
 just by using the jupyter notebooks. No need for terminals. 
 
+<b>Notes </b> </br>
 Obviously, you have to run the jupyter notebook with the ansible user. Eh!
 
 And more obvious, keep in mind the hierarchy of folders for this approach - there won't be necessary a play/ folder for ansible playbooks. 
