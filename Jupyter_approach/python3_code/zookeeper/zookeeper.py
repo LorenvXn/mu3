@@ -104,8 +104,8 @@ play_source_two = dict (
         gather_facts = 'yes',
         tasks = [
                  dict(action=dict(module='copy',
-		 		  dest = '/opt/local_shift/zookeeper/param_run_container.sh',
-                 		  src = '/opt/local_blueprint/blueprint_param_run_container.sh',
+		 		  dest = '/opt/local_shift/zookeeper/run_image.sh',
+                 		  src = '/opt/local_blueprint/zookeeper/blueprint_run_image.sh',
 		 		  owner = 'tron',
 		 		  group = 'tron'))
                  ])
