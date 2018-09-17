@@ -32,6 +32,7 @@ Or, just use a json file.
 <i> Just modify the code before passing the data to variable_manager as extra_vars. </i>
 </br>
 ```
+[...]
 #data=json.loads(sys.argv[1])
 
 filename="/home/hehe/hehe.json"
