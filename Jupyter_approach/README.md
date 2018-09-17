@@ -23,7 +23,25 @@ ansible-playbook zookeeper.yaml --extra-vars "containername=zooky, [...etc...] "
 python zookeeper.py "{\"containername\" : \"zooky\", [...etc...] }" 
 ```
 
+Or, just use a json file.
 
+
+
+<i> snip code can be successfully applied in below example </i>
+</br>
+<i> Just modify the code before passing the data to variable_manager as extra_vars. </i>
+</br>
+```
+#data=json.loads(sys.argv[1])
+
+filename="/home/hehe/hehe.json"
+jj=open(filename, 'r')
+confile=jj.read()
+data = json.loads(confile)
+[...]
+```
+<i> where hehe.json contains line:<i>  { "weather" : "news" }
+ </br>
 <b> Brief Example </b></br>
 Check [test_py3](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/test_py3.ipynb) for a brief example - it deploys changes on a known file,</br>
 by  using modules shell (for cat) and regexp (for word replacement). 
