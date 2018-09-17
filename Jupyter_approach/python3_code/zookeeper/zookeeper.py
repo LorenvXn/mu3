@@ -188,8 +188,40 @@ play_source_seven = dict (
 
 playSeven = Play().load(play_source_seven, variable_manager=variable_manager, loader=loader)
 
+#ports...aaaaah!!!
 
 play_source_eight = dict (
+	name = " port host ",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  regexp = 'porthost',
+		 		  replace = '{{ porthost }}' ))
+				 
+                 ])
+
+playEight = Play().load(play_source_eight, variable_manager=variable_manager, loader=loader)
+
+play_source_nine = dict (
+	name = " port container ",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  regexp = 'portcontainer',
+		 		  replace = '{{ portcontainer }}' ))
+				 
+                 ])
+
+playNine = Play().load(play_source_nine, variable_manager=variable_manager, loader=loader)
+
+
+
+
+play_source_ten = dict (
 	name = " add new name container ",
 	hosts = '{{ master }}',
 	gather_facts = 'yes',
@@ -201,10 +233,10 @@ play_source_eight = dict (
 				 
                  ])
 
-playEight = Play().load(play_source_eight, variable_manager=variable_manager, loader=loader)
+playTen = Play().load(play_source_ten, variable_manager=variable_manager, loader=loader)
 
 
-play_source_nine = dict (
+play_source_eleven = dict (
 	name = " replace tag image ",
 	hosts = '{{ master }}',
 	gather_facts = 'yes',
@@ -216,10 +248,10 @@ play_source_nine = dict (
 				 
                  ])
 
-playNine = Play().load(play_source_nine, variable_manager=variable_manager, loader=loader)
+playEleven = Play().load(play_source_eleven, variable_manager=variable_manager, loader=loader)
 
 
-play_source_ten = dict (
+play_source_twelve = dict (
 	name = " replace storage amount size",
 	hosts = '{{ master }}',
 	gather_facts = 'yes',
@@ -231,10 +263,10 @@ play_source_ten = dict (
 				 
                  ])
 
-playTen = Play().load(play_source_ten, variable_manager=variable_manager, loader=loader)
+playTwelve = Play().load(play_source_twelve, variable_manager=variable_manager, loader=loader)
 
 
-play_source_eleven = dict(
+play_source_thirteen = dict(
 	name = "copy files from controller to remotezookeeper",
         hosts = '{{ minion4 }}',
         gather_facts = 'yes',
@@ -246,10 +278,10 @@ play_source_eleven = dict(
 		 		  group = 'tron'))
                  ])
 
-playEleven = Play().load(play_source_eleven, variable_manager=variable_manager, loader=loader)
+playThirteen = Play().load(play_source_thirteen, variable_manager=variable_manager, loader=loader)
 
 
-play_source_twelve = dict (
+play_source_fourteen = dict (
      name = "build the image on remotezookeeper host",
      hosts = '{{ minion4 }}',
      gather_facts = 'yes',
@@ -262,10 +294,10 @@ play_source_twelve = dict (
 
          ])
 
-playTwelve = Play().load(play_source_twelve, variable_manager=variable_manager, loader=loader)
+playFourteen = Play().load(play_source_fourteen, variable_manager=variable_manager, loader=loader)
 
 
-play_source_thirteen = dict (
+play_source_fifteen = dict (
      name = " wait a minute...lmao!",
      hosts = '{{ minion4 }}',
      gather_facts = 'yes',
@@ -278,9 +310,9 @@ play_source_thirteen = dict (
 
          ])
 
-playThirteen = Play().load(play_source_thirteen, variable_manager=variable_manager, loader=loader)
+playFifteen = Play().load(play_source_fifteen, variable_manager=variable_manager, loader=loader)
 
-play_source_fourteen = dict (
+play_source_sixteen = dict (
      name = " start container on remotezookeeper host ",
      hosts = '{{ minion4 }}',
      gather_facts = 'yes',
@@ -293,7 +325,7 @@ play_source_fourteen = dict (
 
          ])
 
-playFourteen = Play().load(play_source_fourteen, variable_manager=variable_manager, loader=loader)
+playSixteen = Play().load(play_source_sixteen, variable_manager=variable_manager, loader=loader)
 
 
 #queue'em, and run'em
@@ -343,5 +375,9 @@ resultTwelve = final.run(playTwelve)
 resultThirteen = final.run(playThirteen)
 
 resultFourteen = final.run(playFourteen)
+
+resultFifteen = final.run(playFifteen)
+
+resultSixteen = final.run(playSixteen)
 
 
