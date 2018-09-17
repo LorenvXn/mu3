@@ -104,10 +104,10 @@ play_source_two = dict (
         gather_facts = 'yes',
         tasks = [
                  dict(action=dict(module='copy',
-		 		  dest='/opt/local_shift/zookeeper/param_run_container.sh',
-                 		  src='/opt/local_blueprint/blueprint_param_run_container.sh',
-		 		  owner='tron',
-		 		  group='tron'))
+		 		  dest = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  src = '/opt/local_blueprint/blueprint_param_run_container.sh',
+		 		  owner = 'tron',
+		 		  group = 'tron'))
                  ])
 
 playTwo=Play().load(play_source_two, variable_manager=variable_manager, loader=loader)
@@ -119,10 +119,10 @@ play_source_three = dict(
         gather_facts = 'yes',
         tasks = [
                  dict(action=dict(module='copy',
-		 		  dest='/opt/remote_shift/zookeeper/',
-                 		  src=' /opt/local_images/zookeeper/Dockerfile',
-		 		  owner='tron',
-		 		  group='tron'))
+		 		  dest = '/opt/remote_shift/zookeeper/',
+                 		  src = ' /opt/local_images/zookeeper/Dockerfile',
+		 		  owner = 'tron',
+		 		  group = 'tron'))
                  ])
 	
 playThree = Play().load(play_source_three, variable_manager=variable_manager, loader=loader)
@@ -134,9 +134,9 @@ play_source_four = dict (
 	hosts = '{{ master }}',
 	gather_facts = 'yes',
 	tasks = [
-		 dict(action=dict(module='replace',
-                 		  path='/opt/local_shift/zookeeper/run_image.sh',
-                 		  regexp='container',
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/run_image.sh',
+                 		  regexp = 'container',
 		 		  replace = '{{ container }}' ))
 				 
                  ])
@@ -144,6 +144,49 @@ play_source_four = dict (
 playFour = Play().load(play_source_four, variable_manager=variable_manager, loader=loader)
 
 
+play_source_five = dict (
+	name = "replace to build the image",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/run_image.sh',
+                 		  regexp = 'tagimage',
+		 		  replace = '{{ tagimage }}' ))
+				 
+                 ])
+
+playFive = Play().load(play_source_five, variable_manager=variable_manager, loader=loader)
+
+
+play_source_six = dict(
+	name = "copy to remotezookeeper to build image",
+        hosts = '{{ minion4 }}',
+        gather_facts = 'yes',
+        tasks = [
+                 dict(action=dict(module='copy',
+		 		  dest = '/opt/remote_shift/zookeeper/',
+                 		  src = '/opt/local_shift/zookeeper/run_image.sh',
+		 		  owner = 'tron',
+		 		  group = 'tron'))
+                 ])
+
+playSix = Play().load(play_source_six, variable_manager=variable_manager, loader=loader)
+
+
+play_source_seven = dict (
+	name = " add new name container ",
+	hosts = '{{ master }}',
+	gather_facts = 'yes',
+	tasks = [
+		 dict(action=dict(module = 'replace',
+                 		  path = '/opt/local_shift/zookeeper/param_run_container.sh',
+                 		  regexp = 'namecontainer',
+		 		  replace = '{{ namecontainer }}' ))
+				 
+                 ])
+
+playSeven = Play().load(play_source_seven, variable_manager=variable_manager, loader=loader)
 
 [... to be continued ... ]
 
@@ -157,6 +200,8 @@ final = TaskQueueManager(
            )
 
 
-#resultz = [ playOne, playTwo,...]
+#
+# this takes too long:
+# resultz = [ playOne, playTwo,...]
 # for result in resultz
-#	bam = final.run(result)
+#	run_playbooks = final.run(result)
