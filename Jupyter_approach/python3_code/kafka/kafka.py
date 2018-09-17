@@ -77,6 +77,7 @@ options = Options(listtags=False,
 passwords = {}
 
 #plain and simple approach
+# lacking class..lol!
 
 filename="conf.json"  # make sure you change the path accordingly
 
