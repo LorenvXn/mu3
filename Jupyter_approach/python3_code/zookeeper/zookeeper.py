@@ -235,7 +235,7 @@ playEleven = Play().load(play_source_eleven, variable_manager=variable_manager, 
 
 
 play_source_twelve = dict (
-	name = " replace storage amount size",
+	name = " replace storage amount ",
 	hosts = '{{ master }}',
 	gather_facts = 'yes',
 	tasks = [
@@ -329,7 +329,7 @@ final = TaskQueueManager(
 #	run_playbooks = final.run(result)
 
 #the tedious approach, 
-# yet benevolent when of troubleshooting any future changes
+# yet benevolent when troubleshooting any future changes
 
 resultOne = final.run(playOne)
 
