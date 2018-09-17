@@ -41,7 +41,7 @@ confile=jj.read()
 data = json.loads(confile)
 [...]
 ```
-<i> where hehe.json contains line:<i>  { "weather" : "news" }
+<i> where hehe.json contains line:</i>  { "weather" : "news" }
  </br>
  
  
