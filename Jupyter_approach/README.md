@@ -23,7 +23,7 @@ ansible-playbook zookeeper.yaml --extra-vars "containername=zooky, [...etc...] "
 python zookeeper.py "{\"containername\" : \"zooky\", [...etc...] }" 
 ```
 
-Or, just use a json file.
+<b>Or, just use a json file.</b>
 
 
 
