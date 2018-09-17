@@ -69,7 +69,7 @@ passwords = {}
 
 #plain and simple approach
 
-filename="/opt/test/conf.json"  # make sure you change the path accordingly
+filename="conf.json"  # make sure you change the path accordingly
 
 jj=open(filename, 'r')
 
