@@ -27,7 +27,7 @@ python zookeeper.py "{\"containername\" : \"zooky\", [...etc...] }"
 
 
 
-<i> snip code can be successfully applied to the brief example (test_py3)</i>
+<i> snip code from below can be successfully applied to the brief example (test_py3)</i>
 </br>
 <i> Just modify the code before passing the data to variable_manager as extra_vars. </i>
 </br>
