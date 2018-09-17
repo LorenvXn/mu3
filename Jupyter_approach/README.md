@@ -47,7 +47,7 @@ data = json.loads(confile)
  
 <b> Brief Example </b></br>
 Check [test_py3](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/test_py3.ipynb) for a brief example - it deploys changes on a known file,</br>
-by  using modules shell (for cat) and regexp (for word replacement). 
+by  using modules shell (for cat) and regexp (for replacing a certain word). 
 
 
 <b>Why re-writing it? </b>
