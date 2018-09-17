@@ -32,14 +32,14 @@ python zookeeper.py "{\"containername\" : \"zooky\", [...etc...] }"
 <i> Just modify the code before passing the data to variable_manager as extra_vars. </i>
 </br>
 ```
-[...]
+[...snip...]
 #data=json.loads(sys.argv[1])
 
 filename="/home/hehe/hehe.json"
 jj=open(filename, 'r')
 confile=jj.read()
 data = json.loads(confile)
-[...]
+[...snip...]
 ```
 <i> where hehe.json contains line:</i>  { "weather" : "news" }
  </br>
