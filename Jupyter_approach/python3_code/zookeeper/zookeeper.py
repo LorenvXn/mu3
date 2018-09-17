@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 ###
 #
 # + python code for deploying zookeeper image &container
@@ -8,6 +7,7 @@
 # + change conf.json accordingly
 #
 ###########
+
 import os, sys
 import argparse
 import json
