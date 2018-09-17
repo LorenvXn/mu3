@@ -1,5 +1,5 @@
 { "master": "<insert here master IP>",
-  "minion2":"<insert here minion4 IP",
+  "minion2":"<insert here minion2 IP",
   "containerimage" : "kafka",
   "tagimage" : "p3",
   "namecontainer" : "kaf",
