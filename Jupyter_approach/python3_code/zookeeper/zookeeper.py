@@ -254,8 +254,11 @@ play_source_twelve = dict (
      hosts = '{{ minion4 }}',
      gather_facts = 'yes',
      tasks = [
-  		 dict(action=dict(module='shell', args='bash /opt/remote_shift/zookeeper/run_image.sh'), register='shell_out'),
-  		 dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+  		 dict(action=dict(module='shell', 
+				  args='bash /opt/remote_shift/zookeeper/run_image.sh'), 
+		      		  register='shell_out'),
+  		 dict(action=dict(module='debug', 
+				  args=dict(msg='{{shell_out.stdout}}')))
 
          ])
 
@@ -267,8 +270,11 @@ play_source_thirteen = dict (
      hosts = '{{ minion4 }}',
      gather_facts = 'yes',
      tasks = [
-  		 dict(action=dict(module='shell', args='sleep 5'), register='shell_out'),
-  		 dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+  		 dict(action=dict(module='shell', 
+				  args='sleep 5'), 
+		      		  register='shell_out'),
+  		 dict(action=dict(module='debug', 
+				  args=dict(msg='{{shell_out.stdout}}')))
 
          ])
 
@@ -279,8 +285,11 @@ play_source_fourteen = dict (
      hosts = '{{ minion4 }}',
      gather_facts = 'yes',
      tasks = [
-  		 dict(action=dict(module='shell', args='bash /opt/remote_shift/zookeeper/param_run_container.sh '), register='shell_out'),
-  		 dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+  		 dict(action=dict(module='shell', 
+				  args='bash /opt/remote_shift/zookeeper/param_run_container.sh '), 
+		      		  register='shell_out'),
+  		 dict(action=dict(module='debug', 
+				  args=dict(msg='{{shell_out.stdout}}')))
 
          ])
 
