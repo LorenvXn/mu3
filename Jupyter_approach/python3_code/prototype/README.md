@@ -3,7 +3,8 @@
 <b> Prototype code</b>
 
 
-Entire code [proto.py](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/python3_code/prototype/proto.py) is dependent of the value provided for "service" key. Also, do provide all the values you need (master IP, minion IP, containerimage...etc)
+Entire code [proto.py](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/python3_code/prototype/proto.py) depends on the value provided for "service" key.
+<i> Also, do provide all the values you need (master IP, minion IP, containerimage...etc)</i>
 
 Make sure you provide the right path for configuration file conf.json.
 
