@@ -421,7 +421,7 @@ final = TaskQueueManager(
 
 
 #plai cu boi
-# don't use for, it will make cod3 slower
+# don't use for, unless you want bad performance.
 
 result = final.run(play)
 resultOne = final.run(playOne)
