@@ -82,7 +82,7 @@ variable_manager.set_inventory(inventory)
 
 
 ### 
-### the service you want to dockerize
+### the service (ser) you want to dockerize
 ### will change the flow of the entire code
 ###
 
