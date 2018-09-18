@@ -68,9 +68,15 @@ options = Options(listtags=False,
 passwords = {}
 
 
-filename="conf.json"
-
-jj=open(filename, 'r')
+FILE="conf.json"
+print "##### check if configuration file", FILE, " exists ######"
+try:
+        jj=open("conf.js", 'r')
+        print "configuration file ", FILE, " exists"
+except IOError:
+        print('no file %s found. check path/filename again' % FILE)
+        sys.exit()
+	
 
 confile=jj.read()
 
