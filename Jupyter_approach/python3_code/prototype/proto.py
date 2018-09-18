@@ -68,7 +68,7 @@ options = Options(listtags=False,
 passwords = {}
 
 
-filename="/opt/test/conf.json"
+filename="conf.json"
 
 jj=open(filename, 'r')
 
@@ -81,13 +81,14 @@ variable_manager.extra_vars=data
 variable_manager.set_inventory(inventory)
 
 
-### service pampampampam
 ### 
+### the service you want to dockerize 
+### will change the flow of the entire process
+###
 
 ser = data['service']
 
-print ser
-
+#print ser
 
 FILE1 = "/opt/local_blueprint/{0}/blueprint_run_image.sh".format(ser)
 print "#### check existence of blueprint ", FILE1, " to change ### "
