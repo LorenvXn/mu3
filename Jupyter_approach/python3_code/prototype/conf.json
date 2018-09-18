@@ -1,0 +1,9 @@
+{ "master": "127.0.0.1",
+ "minion2":"127.0.0.1",
+ "containerimage" : "kafka",
+ "tagimage" : "v3",
+ "service" : "kafka",
+ "namecontainer" : "mumu",
+ "porthost" : "9092",
+ "portcontainer" : "9092",
+ "amountgb" : "1G"}
