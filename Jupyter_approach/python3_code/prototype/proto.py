@@ -410,6 +410,8 @@ final = TaskQueueManager(
 
 
 
+#plai cu boi
+
 result = final.run(play)
 resultOne = final.run(playOne)
 resultTwo = final.run(playTwo)
