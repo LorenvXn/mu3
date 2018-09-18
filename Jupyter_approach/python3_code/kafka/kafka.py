@@ -98,7 +98,7 @@ variable_manager.extra_vars=data
 variable_manager.set_inventory(inventory)
 
 
-FILE1 = "/opt/kafka/blueprint_run_image.sh"
+FILE1 = "/opt/local_blueprint/kafka/blueprint_run_image.sh"
 print "#### check existence of blueprint ", FILE1, " to change ### "
 try:
         open(FILE1, 'r')
