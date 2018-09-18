@@ -73,7 +73,7 @@ And more obvious, keep in mind the hierarchy of folders for this approach - ther
 
 Check it here: [prototype code](https://github.com/LorenvXn/mu3/blob/master/Jupyter_approach/python3_code/prototype/proto.py)
 
-Entire code is dependent of the value provided for "service" key. Also, do provide all the values you need (master IP, minion IP, containerimage...etc)
+Entire code is dependent on the value provided for "service" key. Also, do provide all the values you need (master IP, minion IP, containerimage...etc)
 
 Make sure you provide the right path for configuration file conf.json.
 
