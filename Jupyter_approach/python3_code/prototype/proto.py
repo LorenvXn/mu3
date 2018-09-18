@@ -136,7 +136,11 @@ play_source = dict (
          ]
     )
 
-play=Play().load(play_source, variable_manager=variable_manager, loader=loader)
+play=Play().load(play_source, 
+		 variable_manager=variable_manager, 
+		 loader=loader)
+
+
 
 play_source_one = dict (
         name = "copy locally blueprint param_run_container.sh into usable files.",
@@ -417,6 +421,7 @@ final = TaskQueueManager(
 
 
 #plai cu boi
+# don't use for, it will make cod3 slower
 
 result = final.run(play)
 resultOne = final.run(playOne)
