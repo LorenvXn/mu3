@@ -87,10 +87,12 @@ variable_manager.extra_vars=data
 variable_manager.set_inventory(inventory)
 
 
-### 
+##
 ### the service (ser) you want to dockerize
-### will change the flow of the entire code
-###
+#### will change the flow of the entire code:
+##### It will change the paths where blueprints are located - either kafka or zookeeper -
+###### and from there, the deployment of specified service on configuration file
+
 
 ser = data['service']
 
