@@ -5,6 +5,10 @@
 
 Entire code is dependent of the value of "service" key.
 
+Make sure you provide the right path for configuration file conf.json.
+
+Just run "python proto.py" ... and that's it!
+
 As per conf.json:
 
 ```
