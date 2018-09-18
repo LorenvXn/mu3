@@ -82,8 +82,8 @@ variable_manager.set_inventory(inventory)
 
 
 ### 
-### the service you want to dockerize 
-### will change the flow of the entire process
+### the service you want to dockerize
+### will change the flow of the entire code
 ###
 
 ser = data['service']
