@@ -3,7 +3,7 @@
 <b> Prototype code</b>
 
 
-Entire code is dependent of the value of "service" key. Also, do provide all the values you need (master IP, minion IP, containerimage...etc)
+Entire code is dependent of the value provided for "service" key. Also, do provide all the values you need (master IP, minion IP, containerimage...etc)
 
 Make sure you provide the right path for configuration file conf.json.
 
