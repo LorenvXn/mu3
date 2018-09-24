@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+#decomment the lines with brackets for for the python3 &Jupyter..eh, 
+#and comment the other lines...
+
 import os, sys
 import argparse
 import json
@@ -96,19 +99,19 @@ variable_manager.set_inventory(inventory)
 
 ser = data['service']
 
-#print ser
-print (ser)
+print ser
+#print (ser)
 
 FILE1 = "/opt/local_blueprint/{0}/blueprint_run_image.sh".format(ser)
 
-#print "#### check existence of blueprint ", FILE1, " to change ### "
-print ("#### check existence of blueprint " , FILE1,  " to change ###" )
+print "#### check existence of blueprint ", FILE1, " to change ### "
+#print ("#### check existence of blueprint " , FILE1,  " to change ###" )
 
 try:
-        open(FILE1, 'r')
+	open(FILE1, 'r')
 	
-        #print "file", FILE1,  " exists"
-	print ("file", FILE1,  " exists")
+	print "file", FILE1,  " exists"
+	#print ("file", FILE1,  " exists")
 	
 except IOError:
         print('no configuration file %s found. Check path/filename again' % FILE1)
@@ -117,25 +120,27 @@ except IOError:
 
 FILE2 = "/opt/local_blueprint/blueprint_param_run_container.sh"
 
-#print "#### check existence of blueprint ", FILE2, " to change ### "
-print ("#### check existence of blueprint " , FILE2,  " to change ###" )
+print "#### check existence of blueprint ", FILE2, " to change ### "
+#print ("#### check existence of blueprint " , FILE2,  " to change ###" )
 
 try:
-        open(FILE2, 'r')
-        #print "file", FILE2,  " exists"
-	print ("file", FILE2,  " exists")
+	open(FILE2, 'r')
+	print "file", FILE2,  " exists"
+	#print ("file", FILE2,  " exists")
 except IOError:
         print('no configuration file %s found. Check path/filename again' % FILE2)
         sys.exit()
       
 
 FILE3 = "/opt/local_images/{0}/Dockerfile".format(ser)
-#print "#### check existence of blueprint ", FILE3, " to change ### "
-print ("#### check existence of blueprint ", FILE3, " to change ### ")
+print "#### check existence of blueprint ", FILE3, " to change ### "
+#print ("#### check existence of blueprint ", FILE3, " to change ### ")
 try:
         open(FILE3, 'r')
-        #print "file", FILE3,  " exists"
-	print ("file", FILE3,  " exists")
+	
+	print "file", FILE3,  " exists"
+	#print ("file", FILE3,  " exists")
+	
 except IOError:
         print('no Dockerfile %s found. Check path/filename again' % FILE3)
         sys.exit()
